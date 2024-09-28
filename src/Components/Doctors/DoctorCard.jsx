@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import starIcon from "../../assets/images/star.png";
 import { BsArrowRight } from "react-icons/bs";
 
 export const DoctorCard = ({ doctor }) => {
@@ -31,7 +30,7 @@ export const DoctorCard = ({ doctor }) => {
           <div className="flex items-center gap-[6px]">
             <span className="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor">
               {avgRating}
-              <img src={starIcon} alt="" />
+              <img src="/images/Star.png" alt="" />
             </span>
 
             <span className="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor">
@@ -45,16 +44,17 @@ export const DoctorCard = ({ doctor }) => {
             <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold text-headingColor">
               +{totalPatients} patients
             </h3>
-            <p className="text-[14px] leading-6 font-[400] text-textColor">{hospital}</p>
+            <p className="text-[14px] leading-6 font-[400] text-textColor">
+              {hospital}
+            </p>
           </div>
 
           <Link
-                  to="/doctors"
-                  className="w-[44px] rounded-full border border-solid border-[#181A1E] flex items-center justify-center group hover:bg-primaryColor hover:border-none"
-                >
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
-
+            to="/doctors"
+            className="w-[44px] rounded-full border border-solid border-[#181A1E] flex items-center justify-center group hover:bg-primaryColor hover:border-none"
+          >
+            <BsArrowRight className="group-hover:text-white w-6 h-5" />
+          </Link>
         </div>
       </div>
     </>
